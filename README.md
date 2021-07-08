@@ -7,4 +7,4 @@ SpringBoot+MyBatis-plus实现，前端基于vue框架和微信小程序ui框架�
 理、账户管理等模块。
 
 总体业务需求流程图：
-图片: https://uploader.shimo.im/f/12ExG7Hf9irRdGoG.png?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhY2Nlc3NfcmVzb3VyY2UiLCJleHAiOjE2MjU3MzM3ODEsImciOiJLcmtFWnhvME1FaUo5d0FKIiwiaWF0IjoxNjI1NzMzNDgxLCJ1c2VySWQiOjY3OTU0MTY4fQ.x946oR5a1W6UGcUN4Nx7dlKrxGrQYqDKDdq02jirAKM
+图片: ![image](/image/demand.png)
