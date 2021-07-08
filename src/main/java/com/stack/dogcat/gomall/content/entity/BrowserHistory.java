@@ -1,9 +1,6 @@
 package com.stack.dogcat.gomall.content.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -50,7 +47,8 @@ public class BrowserHistory implements Serializable {
      * 逻辑删除，0表示未删除，1表示删除
      */
     @TableLogic
-    private Integer isDeleted;
+    @TableField(value = "is_deleted")
+    private Integer deleted;
 
 
 }

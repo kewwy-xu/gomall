@@ -1,12 +1,11 @@
 package com.stack.dogcat.gomall.content.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -47,7 +46,9 @@ public class SearchHistory implements Serializable {
     /**
      * 逻辑删除，0表示未删除，1表示删除
      */
-    private Integer isDeleted;
+    @TableLogic
+    @TableField(value = "is_deleted")
+    private Integer deleted;
 
 
 }

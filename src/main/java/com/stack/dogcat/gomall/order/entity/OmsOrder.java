@@ -1,12 +1,15 @@
 package com.stack.dogcat.gomall.order.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -73,15 +76,17 @@ public class OmsOrder implements Serializable {
      */
     private LocalDateTime gmtCreate;
 
-    /**
-     * 逻辑删除，0表示未删除，1表示删除
-     */
-    private Integer isDeleted;
 
     /**
      * 收货地址id
      */
     private Integer receiveAddressId;
 
+    /**
+     * 逻辑删除，0表示未删除，1表示删除
+     */
+    @TableLogic
+    @TableField(value = "is_deleted")
+    private Integer deleted;
 
 }

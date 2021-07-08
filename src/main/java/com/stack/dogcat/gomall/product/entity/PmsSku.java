@@ -1,12 +1,15 @@
 package com.stack.dogcat.gomall.product.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -56,9 +59,11 @@ public class PmsSku implements Serializable {
     private Integer salesNum;
 
     /**
-     * 该行记录是否被删除,0->未删除,1->已删除
+     * 逻辑删除，0表示未删除，1表示删除
      */
-    private Integer isDeleted;
+    @TableLogic
+    @TableField(value = "is_deleted")
+    private Integer deleted;
 
 
 }

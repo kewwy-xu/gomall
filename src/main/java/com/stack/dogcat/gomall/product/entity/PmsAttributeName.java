@@ -1,11 +1,14 @@
 package com.stack.dogcat.gomall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -58,14 +61,14 @@ public class PmsAttributeName implements Serializable {
     private Integer handAdd;
 
     /**
-     * 是否支持手动新增，0->否，1->是
-     */
-    private Integer isDeleted;
-
-    /**
      * 所属分类id
      */
     private Integer typeId;
 
-
+    /**
+     * 逻辑删除，0表示未删除，1表示删除
+     */
+    @TableLogic
+    @TableField(value = "is_deleted")
+    private Integer deleted;
 }

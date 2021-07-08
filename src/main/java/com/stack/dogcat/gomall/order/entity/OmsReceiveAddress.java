@@ -1,10 +1,13 @@
 package com.stack.dogcat.gomall.order.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -44,7 +47,10 @@ public class OmsReceiveAddress implements Serializable {
     /**
      * 逻辑删除，0表示未删除，1表示删除
      */
-    private Integer isDeleted;
+    @TableLogic
+    @TableField(value = "is_deleted")
+    private Integer deleted;
+
 
 
 }
