@@ -7,4 +7,5 @@ SpringBoot+MyBatis-plus实现，前端基于vue框架和微信小程序ui框架�
 理、账户管理等模块。
 
 总体业务需求流程图：
+
 ![image](image/demand.png)
