@@ -33,9 +33,9 @@ public class ChatList implements Serializable {
     private Integer chatUserLinkId;
 
     /**
-     * 发送方
+     * 发送方，0是顾客，1是商家
      */
-    private String senderType;
+    private Integer senderType;
 
     /**
      * 未读消息数

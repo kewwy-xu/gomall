@@ -34,7 +34,7 @@ public class ChatMessage implements Serializable {
     private Integer chatUserLinkId;
 
     /**
-     * 顾客id
+     * 发送方，0是顾客，1是商家
      */
     private Integer senderType;
 
